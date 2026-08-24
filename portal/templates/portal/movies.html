@@ -1,0 +1,40 @@
+{% extends 'portal/base.html' %}
+
+{% block title %}PIXELVERSE — Кінофільми{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <p class="eyebrow">MOVIE ZONE</p>
+  <h1>Кінопрем'єри <span>2026</span></h1>
+  <p>Очікувані фільми, трейлери, прем'єри та новини кіно.</p>
+</section>
+<div class="catalog">
+  <article class="catalog-card">
+    <div class="poster poster-movie tall">DARK<br>MATTER</div>
+    <div>
+      <span class="tag movie-tag">SCI-FI</span>
+      <h2>Dark Matter</h2>
+      <p>Фантастичний трилер про експедицію за межі відомого.</p>
+      <button class="primary-btn small" type="button">Детальніше</button>
+    </div>
+  </article>
+  <article class="catalog-card">
+    <div class="poster p2 tall">STAR<br>BOUND</div>
+    <div>
+      <span class="tag movie-tag">ADVENTURE</span>
+      <h2>Star Bound</h2>
+      <p>Пригодницька історія нового покоління космічних мандрівників.</p>
+      <button class="primary-btn small" type="button">Детальніше</button>
+    </div>
+  </article>
+  <article class="catalog-card">
+    <div class="poster p4 tall">LAST<br>ECHO</div>
+    <div>
+      <span class="tag movie-tag">THRILLER</span>
+      <h2>Last Echo</h2>
+      <p>Таємничий трилер про сигнал, який ніхто не мав почути.</p>
+      <button class="primary-btn small" type="button">Детальніше</button>
+    </div>
+  </article>
+</div>
+{% endblock %}

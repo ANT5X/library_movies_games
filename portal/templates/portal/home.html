@@ -1,0 +1,86 @@
+{% extends 'portal/base.html' %}
+
+{% block title %}PIXELVERSE — Головна{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">НОВИНИ • РЕЛІЗИ • ПРЕМ'ЄРИ</p>
+    <h1>Твій портал у світ <span>ігор</span> та <span>кіно</span>.</h1>
+    <p class="hero-text">Свіжі новини про майбутні релізи, трейлери, прем'єри та проєкти, які варто не пропустити.</p>
+    <div class="hero-actions">
+      <a class="primary-btn" href="{% url 'games' %}">Дивитися ігри →</a>
+      <a class="ghost-btn" href="{% url 'movies' %}">Кінопрем'єри</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="floating-card card-back">NEW<br>RELEASE</div>
+    <div class="hero-poster">
+      <small>PIXELVERSE ORIGINAL</small>
+      <strong>NEON<br>HORIZON</strong>
+      <span>COMING SOON</span>
+    </div>
+  </div>
+</section>
+
+<section class="ticker">
+  <div>🔥 HOT NEWS</div>
+  <div>🎮 Нові ігрові релізи</div>
+  <div>🎬 Кінопрем'єри</div>
+  <div>⚡ Трейлери та анонси</div>
+</section>
+
+<section class="section-block">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">ОСТАННЄ</p>
+      <h2>Головні новини</h2>
+    </div>
+    <a class="text-btn" href="{% url 'games' %}">Усі новини →</a>
+  </div>
+  <div class="news-grid">
+    <article class="news-card large">
+      <div class="poster poster-game">NOVA</div>
+      <div class="news-body">
+        <span class="tag game-tag">ІГРИ</span>
+        <h3>Nova Strike отримала новий трейлер та дату релізу</h3>
+        <p>Розробники показали нові локації, бойову систему та кооперативний режим.</p>
+        <small>10 серпня 2026 • 5 хв читання</small>
+      </div>
+    </article>
+    <article class="news-card">
+      <div class="poster poster-movie">DARK<br>MATTER</div>
+      <div class="news-body">
+        <span class="tag movie-tag">КІНО</span>
+        <h3>Dark Matter: перший погляд на фантастичний блокбастер</h3>
+        <p>Нові кадри та офіційний синопсис.</p>
+        <small>9 серпня 2026 • 3 хв</small>
+      </div>
+    </article>
+    <article class="news-card">
+      <div class="poster poster-original">PX<br>01</div>
+      <div class="news-body">
+        <span class="tag original-tag">ORIGINAL</span>
+        <h3>PIXELVERSE запускає власний кінопроєкт</h3>
+        <p>Перший оригінальний проєкт порталу вже у виробництві.</p>
+        <small>8 серпня 2026 • 4 хв</small>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">ПОПУЛЯРНЕ</p>
+      <h2>Постери тижня</h2>
+    </div>
+  </div>
+  <div class="poster-row">
+    <div class="mini-poster p1"><b>CYBER<br>FALL</b><span>GAME</span></div>
+    <div class="mini-poster p2"><b>STAR<br>BOUND</b><span>MOVIE</span></div>
+    <div class="mini-poster p3"><b>VOID<br>RUNNER</b><span>GAME</span></div>
+    <div class="mini-poster p4"><b>LAST<br>ECHO</b><span>MOVIE</span></div>
+  </div>
+</section>
+{% endblock %}

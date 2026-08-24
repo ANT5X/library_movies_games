@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}PIXELVERSE — Ігри та Кіно{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'portal/css/style.css' %}">
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="header">
+    <a class="logo" href="{% url 'home' %}"><span>PX</span> PIXELVERSE</a>
+    <nav class="nav">
+      <a class="nav-link{% if request.resolver_match.url_name == 'home' %} active{% endif %}" href="{% url 'home' %}">Головна</a>
+      <a class="nav-link{% if request.resolver_match.url_name == 'games' %} active{% endif %}" href="{% url 'games' %}">Ігри</a>
+      <a class="nav-link{% if request.resolver_match.url_name == 'movies' %} active{% endif %}" href="{% url 'movies' %}">Кінофільми</a>
+      <a class="nav-link{% if request.resolver_match.url_name == 'originals' %} active{% endif %}" href="{% url 'originals' %}">Власне виробництво</a>
+    </nav>
+    <button class="login-btn" id="openRegister" type="button">Увійти / Реєстрація</button>
+  </header>
+
+  <main class="page-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <a class="logo" href="{% url 'home' %}"><span>PX</span> PIXELVERSE</a>
+    <span>Ігри • Кіно • Original</span>
+  </footer>
+
+  <div class="chat" id="chat">
+    <div class="chat-header">
+      <div><b>PIXEL CHAT</b><small>Онлайн-спільнота</small></div>
+      <button id="closeChat" type="button" aria-label="Закрити чат">×</button>
+    </div>
+    <div class="chat-messages" id="messages">
+      <div class="msg bot">Привіт! Обговорюємо нові ігри та фільми 👋</div>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" placeholder="Напиши повідомлення..." autocomplete="off">
+      <button type="submit" aria-label="Надіслати">➤</button>
+    </form>
+  </div>
+  <button class="chat-fab" id="openChat" type="button">💬 <span>Чат</span></button>
+
+  <div class="modal" id="registerModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeRegister" type="button" aria-label="Закрити">×</button>
+      <div class="modal-icon">PX</div>
+      <p class="eyebrow">PIXELVERSE ACCOUNT</p>
+      <h2>Приєднуйся до спільноти</h2>
+      <p>Створи акаунт, щоб коментувати новини та спілкуватися в чаті.</p>
+      <form id="registerForm">
+        <input required type="text" placeholder="Ім'я користувача">
+        <input required type="email" placeholder="Email">
+        <input required type="password" placeholder="Пароль">
+        <button class="primary-btn full" type="submit">Створити акаунт</button>
+      </form>
+      <div class="success" id="success">Акаунт створено! Ласкаво просимо до PIXELVERSE 🎮</div>
+    </div>
+  </div>
+
+  <script src="{% static 'portal/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'portal/base.html' %}
+
+{% block title %}PIXELVERSE — Ігри{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <p class="eyebrow">GAME ZONE</p>
+  <h1>Нові <span>ігри</span></h1>
+  <p>Анонси, релізи, трейлери та головні новини ігрової індустрії.</p>
+</section>
+<div class="catalog">
+  <article class="catalog-card">
+    <div class="poster poster-game tall">NOVA<br>STRIKE</div>
+    <div>
+      <span class="tag game-tag">ACTION</span>
+      <h2>Nova Strike</h2>
+      <p>Космічний action із масштабними боями та кооперативом.</p>
+      <button class="primary-btn small" type="button">Детальніше</button>
+    </div>
+  </article>
+  <article class="catalog-card">
+    <div class="poster p3 tall">VOID<br>RUNNER</div>
+    <div>
+      <span class="tag game-tag">CYBERPUNK</span>
+      <h2>Void Runner</h2>
+      <p>Швидкий неоновий шутер у футуристичному мегаполісі.</p>
+      <button class="primary-btn small" type="button">Детальніше</button>
+    </div>
+  </article>
+  <article class="catalog-card">
+    <div class="poster p1 tall">CYBER<br>FALL</div>
+    <div>
+      <span class="tag game-tag">RPG</span>
+      <h2>Cyber Fall</h2>
+      <p>Похмурий RPG-світ, де кожне рішення змінює історію.</p>
+      <button class="primary-btn small" type="button">Детальніше</button>
+    </div>
+  </article>
+</div>
+{% endblock %}
